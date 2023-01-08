@@ -10,7 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#ff473e">
     <title>notes</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="icon" href="./favicon.png" type="image/png" />
     <link rel="manifest" href="./manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
@@ -94,7 +94,7 @@
             for (let file of data.filter(filterFiles(filter)).sort(sortFiles(filter))) {
                 const fileName = file.path.replace('.md', '');
                 const fileDisplayName = fileName.split('-').join(' ');
-                htmlString += `<li><a href="${fileName}">${fileDisplayName}</a></li>`;
+                htmlString += `<li><a href="../${fileName}">${fileDisplayName}</a></li>`;
             }
             document.getElementById('list').innerHTML = htmlString;
         }
